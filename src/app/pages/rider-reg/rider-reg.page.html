@@ -1,0 +1,125 @@
+<!-- <ion-header>
+  <ion-toolbar color = "primary">
+      <ion-buttons slot = "start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Rider Registration</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<!-- <ion-content class = "background">
+  <ion-card>
+    <ion-card-content>
+        <ion-item>
+            <ion-label position = "floating">Name</ion-label>
+            <ion-input type = "text" required [(ngModel)]="riderUser.name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position = "floating">Display Name</ion-label>
+          <ion-input type = "text" required [(ngModel)]="riderUser.displayName"></ion-input>
+        </ion-item>
+          
+          <ion-item>
+              <ion-label position = "floating">Email</ion-label>
+              <ion-input type = "email" required [(ngModel)]="riderUser.email"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label position = "floating">Password</ion-label>
+              <ion-input type = "password" required [(ngModel)]="riderUser.password"></ion-input>        
+          </ion-item>
+        
+          <ion-item>
+              <ion-label position = "floating">Phone Number</ion-label>
+              <ion-input type = "text" required [(ngModel)]="riderUser.phoneNumber"></ion-input>
+          </ion-item>
+
+
+          <ion-item>
+              <ion-label>Select Park</ion-label>
+              <ion-select [(ngModel)]="riderUser.park" (ionChange)="onChange(riderUser.park)">
+                <ion-select-option value="Jos Terminus, Ahmadu Bello Way, Jos, Nigeria" checked="true">Jos Terminus, Ahmadu Bello Way, Jos, Nigeria</ion-select-option>
+                <ion-select-option value="University Of Jos Permanent Site, Jos, Nigeria">University Of Jos Permanent Site, Jos, Nigeria</ion-select-option>
+                <ion-select-option value="Naraguta Hostel Block A, Naraguta Road,Jos,Nigeria">Naraguta Hostel Block A, Naraguta Road,Jos,Nigeria</ion-select-option>
+                <ion-select-option value="Angwan Rukuba, Jos, Nigeria">Angwan Rukuba, Jos, Nigeria</ion-select-option>
+                <ion-select-option value="UNIJOS HOSTELS, Zaria Road, Jos,Nigeria">UNIJOS HOSTELS, Zaria Road, Jos,Nigeria</ion-select-option>
+              </ion-select>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position = "floating">Plate Number</ion-label>
+            <ion-input type = "text" required [(ngModel)]="riderUser.plateNumber"></ion-input> 
+          </ion-item>
+          
+          <ion-item>
+            <ion-button (click)="riderReg()" fill = "outline" expand = "block">Register</ion-button>
+          </ion-item>
+
+      <ion-item>
+        <p>Already have an account? Login <a (click)="backToLogin()">Here</a></p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+<ion-content color="secondary">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3 style="font-family:cursive; font-style:inherit; font-size:20px;">Create Your account!</h3>
+          </div>
+          <div padding>
+              <ion-item>
+                  <ion-label position = "floating">Name</ion-label>
+                  <ion-input type = "text" required [(ngModel)]="riderUser.name"></ion-input>
+              </ion-item>
+      
+              <ion-item>
+                <ion-label position = "floating">Display Name</ion-label>
+                <ion-input type = "text" required [(ngModel)]="riderUser.displayName"></ion-input>
+              </ion-item>
+                
+                <ion-item>
+                    <ion-label position = "floating">Email</ion-label>
+                    <ion-input type = "email" required [(ngModel)]="riderUser.email"></ion-input>
+                </ion-item>
+        
+                <ion-item>
+                    <ion-label position = "floating">Password</ion-label>
+                    <ion-input type = "password" required [(ngModel)]="riderUser.password"></ion-input>        
+                </ion-item>
+              
+                <ion-item>
+                    <ion-label position = "floating">Phone Number</ion-label>
+                    <ion-input type = "text" required [(ngModel)]="riderUser.phoneNumber"></ion-input>
+                </ion-item>
+      
+      
+                <ion-item>
+                    <ion-label>Select Park</ion-label>
+                    <ion-select [(ngModel)]="riderUser.park" (ionChange)="onChange(riderUser.park)">
+                      <ion-select-option value="Jos Terminus, Ahmadu Bello Way, Jos, Nigeria" checked="true">Jos Terminus, Ahmadu Bello Way, Jos, Nigeria</ion-select-option>
+                      <ion-select-option value="University Of Jos Permanent Site, Jos, Nigeria">University Of Jos Permanent Site, Jos, Nigeria</ion-select-option>
+                      <ion-select-option value="Naraguta Hostel Block A, Naraguta Road,Jos,Nigeria">Naraguta Hostel Block A, Naraguta Road,Jos,Nigeria</ion-select-option>
+                      <ion-select-option value="Angwan Rukuba, Jos, Nigeria">Angwan Rukuba, Jos, Nigeria</ion-select-option>
+                      <ion-select-option value="UNIJOS HOSTELS, Zaria Road, Jos,Nigeria">UNIJOS HOSTELS, Zaria Road, Jos,Nigeria</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-label position = "floating">Plate Number</ion-label>
+                  <ion-input type = "text" required [(ngModel)]="riderUser.plateNumber"></ion-input> 
+                </ion-item>
+          </div>
+          <div padding>
+            <ion-button (click)="riderReg()" fill = "solid" expand = "block">Register</ion-button>
+          </div>
+
+          <ion-item>
+            <p>Already have an account? Login <a (click)="backToLogin()">Here</a></p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

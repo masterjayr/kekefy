@@ -1,0 +1,72 @@
+.chat{
+    width: 320px;
+}
+
+.bubble{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #b2b2b2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+}
+
+.message {
+    padding: 10px !important;
+    transition: all 250ms ease-in-out !important;
+    border-radius: 10px !important;
+    margin-bottom: 4px !important;
+}
+// .bubble::before{
+//     background-color: #f2f2f2;
+//     content: "\00a0";
+//     display:  block;
+//     height: 16px;
+//     position: absolute;
+//     top: 11px;
+//     transform:rotate( 29deg ) skew( -39deg );
+//     -moz-transform:rotate( 29deg ) skew( -39deg );
+//     -ms-transform:rotate( 29deg ) skew( -39deg );
+//     -o-transform:rotate( 29deg ) skew( -39deg );
+//     -webkit-transform:rotate( 29deg ) skew( -39deg );
+//     width: 20px;
+// }
+
+.me{
+    float: right;
+    margin: 5px 45px 5px 20px;
+}
+
+.me::before{
+    box-shadow: -2px 2px 2px 0 rgba(178 , 178 , 178, .4);
+    left: -9px;
+}
+
+.you{
+    float: right;
+    margin: 5px 20px 5px 45px;
+}
+
+.you::before{
+    box-shadow: -2px 2px 2px 0 rgba(178 , 178 , 178, .4);
+    left: -9px;
+}
+
+.chatWindow{
+    padding-bottom: 70px;
+    width: 320px;
+}
+
+.sendbutton{
+    float: right;
+}
+
+.yours{
+    float: left;
+}
+
+
+.mine{
+    float: right;
+}

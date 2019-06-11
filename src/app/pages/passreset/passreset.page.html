@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Reset Password</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <!-- <div text-center>
+              <h4>Password Reset</h4>
+            </div> -->
+            <div padding>
+              <ion-item>
+                <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+              </ion-item>
+            </div>
+    
+            <div padding>
+              <ion-button expand = "block" size ="large" (click)= "reset()">Reset</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+    
+      </ion-grid>
+</ion-content>

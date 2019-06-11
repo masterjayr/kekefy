@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot = "start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div (click)="editImage()">
+    <img src = "{{avatar}}" class = "img">
+  </div>
+
+  <div>
+    <h2>{{displayName}}</h2>
+  </div>
+
+  <div>
+    Tap on your pic to change it
+  </div>
+
+  <div>
+    <ion-button shape ="round" fill =  "outline" color = "danger"(click)="logout()">Logout</ion-button>
+  </div>
+</ion-content>

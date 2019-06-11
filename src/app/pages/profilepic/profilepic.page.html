@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+    <ion-title>Profile Picture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class = "profile-image">
+    <img src = "{{imgurl}}">
+  </div>
+
+  <div>
+    <ion-button fill = "outline" shape = "round" (click)="chooseImg()">Choose an Image</ion-button>
+  </div>
+
+  <div [hidden] ="!moveon">
+    <ion-button fill="outline" shape= "round" (click)="proceed()">Skip this step</ion-button>
+  </div>
+
+  <div [hidden] = "moveon">
+    <ion-button fill = "outline" shape = "round" (click)="updateProceed()">Upload & Proceed</ion-button>
+  </div>
+</ion-content>

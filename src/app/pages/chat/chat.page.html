@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color =  "primary">
+    <ion-title>Chat</ion-title>
+    <ion-buttons slot ="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content>
+  <div class = "chatWindow">
+    <ion-list lines = "none">
+      <ion-item *ngFor = "let item of allmessages; let i = index" text-wrap>
+        <ion-avatar slot = "start" *ngIf ="item.sentby === customer.uid">
+          <img src = "{{customer.photoURL}}">
+        </ion-avatar>
+        <div class = "bubble me" *ngIf = "item.sentby === customer.uid">
+          <h3>{{item.message}}</h3>
+        </div>
+        <ion-avatar slot = "end" *ngIf="item.sentby !== customer.uid">
+          <img src = "{{photoURL}}">
+        </ion-avatar>
+        <div class= "bubble you" *ngIf = "item.sentby !== customer.uid">
+          <h3>{{item.message}}</h3>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class = "no-border" color = "white">
+      <ion-grid>
+          <ion-row>
+              <ion-input [(ngModel)]="newmessage" placeholder="Write your message..."></ion-input>
+              <ion-button (click)="addmessage()" color="primary" class="sendbutton">
+                <ion-icon slot="icon-only" name="send"></ion-icon>
+              </ion-button>
+          </ion-row>
+        </ion-grid>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+      <ion-buttons slot = "start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot = "end">
+        <ion-button (click)="notifications()">
+          <ion-icon slot="icon-only" name="notifications"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Available Pickups</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor = "let request of allrequests">
+      <ion-card>
+        <ion-item>
+            <p>Sender: {{request.name}}</p>
+            <br>
+            <p>Current Location: {{request.location}}</p>
+            <br>
+            <p>Destination: {{request.destination}}</p>
+            <ion-button (click)="acceptRequest(request)">Accept</ion-button>
+        </ion-item>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+<!-- <ion-grid>
+  <ion-row *ngFor = "let request of allrequests">
+    <ion-col size = "3">
+      <ion-avatar slot = "start">
+        <img src = "{{request.photoURL}}">
+      </ion-avatar>
+    </ion-col>
+
+    <ion-col size = "9">
+      <h5>Sender: {{request.name}}</h5><br>
+      <h5>Location: {{request.location}}</h5><br>
+      <h5>Destination: {{request.destination}}</h5><br>
+      <ion-button (click)="acceptRequest(request)">Accept</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid> -->
+  
+</ion-content>

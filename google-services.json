@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "433700014440",
+    "firebase_url": "https://kekefy-24691.firebaseio.com",
+    "project_id": "kekefy-24691",
+    "storage_bucket": "kekefy-24691.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433700014440:android:bcd16b3d2e2cc413",
+        "android_client_info": {
+          "package_name": "com.kekefy.myproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433700014440-hpdh3unlamqgt76qok63tojlk023voeu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kekefy.myproject",
+            "certificate_hash": "f6f6fca333dc43c8eaafff73a65349e47f2949b7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCLtfc5dMY2fu7hz5cMzKbULmI4WMZaJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433700014440-tpj99iapd8n8nk0vl2dek6br9f7v1pdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

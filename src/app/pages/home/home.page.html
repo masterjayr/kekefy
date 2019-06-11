@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="bg" text-center style="height:120%">
+
+    <div style="padding-right: 10px; padding-left: 10px;">
+
+      <img src="../../../assets/imgs/logonew.png" style="margin-top:0px; height: 90px; width:70px; padding-top: 10px">
+      <p style="color:#FFF; font-size: 13px; font-style:inherit; font-family: cursive;">Explore the road with kekefy, lets help you get to your destination
+        easier and faster</p>
+
+      <ion-card style="background-color:#FFF">
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="floating">
+              <ion-icon slot="start" name="mail" style="margin-right:5px; font-size: 20px"></ion-icon>Email
+            </ion-label>
+            <ion-input type="email" required [(ngModel)]="customerUser.email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">
+              <ion-icon slot="start" name="lock" style="margin-right:5px; font-size: 20px"></ion-icon>Password
+            </ion-label>
+            <ion-input type="password" required [(ngModel)]="customerUser.password"></ion-input>
+          </ion-item>
+
+          <ion-button fill="outline" expand="block" (click)="login()">LOGIN</ion-button>
+
+          <ion-label style="color:#000">- Or sign in with -</ion-label><br>
+          <ion-button (click)="facebook()" color="primary">
+            <ion-icon slot="start" name="logo-facebook" style="margin-left:20px;margin-right:20px"></ion-icon>
+
+          </ion-button>
+
+          <ion-button (click)="google()" color="danger">
+            <ion-icon slot="start" name="logo-google" style="margin-left:20px;margin-right:20px"></ion-icon>
+
+          </ion-button>
+
+        </ion-card-content>
+      </ion-card>
+      <div>
+        <div style="padding-left:10px; padding-right:10px">
+          <!-- <ion-button (click)="login()" expand="block">LOGIN</ion-button> -->
+          <ion-label style="color:#FFF" (click)="signUp()">Don't have an account?<br>
+            <h5> Sign Up</h5>
+          </ion-label>
+          <br> 
+          <p style="color: #FFF">Forgot Login Details? <a (click)="passwordReset()"> Get Here</a></p>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</ion-content>

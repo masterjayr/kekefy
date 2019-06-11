@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color = "primary">
+      <ion-buttons slot = "start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot = "end">
+        <ion-button (click)="notifications()">
+          <ion-icon slot="icon-only" name="notifications"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Request Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      <ion-item>
+        <ion-searchbar value = "{{destination}}" placeholder ="Where to?" [(ngModel)]="autocomplete.query" showCancelButton (ionInput)="updateSearch()" (ionCancel)="dismiss()"></ion-searchbar>
+      </ion-item>
+      
+      <ion-list>
+        <ion-item *ngFor = "let item of autocompleteItems" tappable (click)="chooseItem(item)">
+          {{item}}
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label>Type of Ride</ion-label>
+        <ion-select [(ngModel)]="journeyType" (ionChange)="onChange(journeyType)">
+          <ion-select-option value = "drop">Drop</ion-select-option>
+          <ion-select-option value = "special services" checked = "true">Special Services</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button [disabled]="!thereIsTypeOfDrop" (click)="sendRequest()" fill = "outline" expand = "block">REQUEST NOW</ion-button>
+     
+      <div #map id ="map"></div>
+  
+</ion-content>
